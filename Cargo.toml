@@ -2,6 +2,7 @@
 name = "python-alias"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/naughie/python-alias"
 
 [[bin]]
 name = "python3"
@@ -17,3 +18,8 @@ overflow-checks = false
 panic = "abort"
 split-debuginfo = "off"
 strip = "symbols"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
