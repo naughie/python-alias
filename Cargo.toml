@@ -1,0 +1,19 @@
+[package]
+name = "python-alias"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "python3"
+path = "src/main.rs"
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+lto = true
+opt-level = "z"
+overflow-checks = false
+panic = "abort"
+split-debuginfo = "off"
+strip = "symbols"
